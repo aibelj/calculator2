@@ -1,2 +1,2 @@
-def multiplication(a, b):
-    return float(a) * float(b)
+def multiplication(multiplier, multiplicant):
+    return float(multiplier) * float(multiplicant)
