@@ -1,2 +1,3 @@
-def squarerooting(a):
-    return round((float(a)**.5), 8)
+def squareRoot(radicant):
+    from math import sqrt
+    return sqrt(radicant)
