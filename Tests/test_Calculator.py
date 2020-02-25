@@ -1,7 +1,12 @@
 import unittest
 
 from Calculator.Calculator import Calculator
-from CsvReader.CsvReader import CsvReader
+from Calculator.Addition import addition
+from Calculator.Subtraction import subtraction
+from Calculator.Multiplication import multiplication
+from Calculator.Division import division
+from Calculator.Logarithm import logarithm
+from Calculator.SquareRoot import squarerooting
 
 
 class MyTestCase(unittest.TestCase):
@@ -11,16 +16,27 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)
 
-    def test_subtraction(self):
-        test_data = CsvReader("Tests/Data/subtraction.csv").data
-        for row in test_data:
-            result = float(row['Result'])
-            self.assertEqual(self.calculator.subtract(row['Value 2'], row['Value 1']), result)
-            self.assertEqual(self.calculator.result, result)
-
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
 
+    def test_addition(self):
+        self.assertEqual(3, addition(1,2))
+
+    def test_subtraction(self):
+        self.assertEqual(10, subtraction(25,15))
+
+    def test_multiplication(self):
+        self.assertEqual(36,multiplication(2,3))
+
+    def test_division(self):
+        self.assertEqual(2, division(4,2))
+
+       def test_logarithm(self):
+        self.assertEqual(3, logarithm(729, 9))
+
+    def test_squareRoot(self):
+        self.assertEqual(5, squarerooting(25))
 
 if __name__ == '__main__':
     unittest.main()
+
