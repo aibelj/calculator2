@@ -35,7 +35,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(3, logarithm(729, 9))
 
     def test_squareRoot(self):
-        self.assertEqual(5, squarerooting(25))
+        self.assertEqual(5, squareroot(25))
 
 if __name__ == '__main__':
     unittest.main()
