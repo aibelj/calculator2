@@ -3,7 +3,7 @@ from Calculator.Addition import addition
 from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Calculator.Square import squaring
-from Calculator.SquareRoot import squarerooting
+from Calculator.SquareRoot import squareroot
 
 class Calculator:
     result = 0

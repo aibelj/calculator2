@@ -6,7 +6,7 @@ from Calculator.Subtraction import subtraction
 from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Calculator.Logarithm import logarithm
-from Calculator.SquareRoot import squarerooting
+from Calculator.SquareRoot import squareroot
 
 
 class MyTestCase(unittest.TestCase):
@@ -26,12 +26,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(10, subtraction(25,15))
 
     def test_multiplication(self):
-        self.assertEqual(36,multiplication(2,3))
+        self.assertEqual(6, multiplication(2,3))
 
     def test_division(self):
         self.assertEqual(2, division(4,2))
 
-       def test_logarithm(self):
+    def test_logarithm(self):
         self.assertEqual(3, logarithm(729, 9))
 
     def test_squareRoot(self):
