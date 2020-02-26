@@ -5,8 +5,6 @@ from Calculator.Division import division
 from Calculator.Square import squaring
 from Calculator.SquareRoot import squareroot
 
-from Statistics.Mode import mode
-from Statistics.Median import median
 
 class Calculator:
     result = 0
@@ -38,10 +36,3 @@ class Calculator:
         self.result = squareroot(a)
         return self.result
 
-    def mode(self, data):
-        self.result = mode(data)
-        return self.result
-
-    def median (self, data)
-        self.result = median(data)
-        return self.result
