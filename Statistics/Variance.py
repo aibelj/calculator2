@@ -1,6 +1,6 @@
 import statistics
 
 def variance (data):
-    var = (statistics.variance(data, xbar=None))
+    solution = statistics.variance(data, xbar=None)
 
-    return var
+    return solution
