@@ -32,5 +32,5 @@ class Calculator:
         return self.result
 
     def squareroot(self, a):
-        self.result = squarerooting(a)
+        self.result = squareroot(a)
         return self.result
