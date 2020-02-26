@@ -4,6 +4,7 @@ from random import random
 import unittest
 import numpy as np
 from numpy.random import seed
+from Random.RandomIntGen import random_ints
 from numpy.random import randint
 import pprint
 
@@ -61,10 +62,17 @@ class Random:
         return random_flts
 
     def random_item_lst (self, lst):
-        # Select a random item from a list
+        # user passes a list and a random item is selected
 
         selection = random.choice(lst)
         return selection
+
+    def random_item (self, numRange, lstLen):
+        #a random list of integers is generated and a random item is selected and returned
+        #source: https://realpython.com/python-random/
+        items = random_ints(numRange, lstLen)
+        item = random.choice(items)
+        return item
 
 
 
