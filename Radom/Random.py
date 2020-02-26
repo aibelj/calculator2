@@ -27,22 +27,24 @@ class Random:
         random_flt =  round(random.uniform(1,11), 2)
 
         return (random_flt, random_int)
-'''
-    def random_list_seed(numRange, lstLen):
+
+    def random_lst_seed(numRange, lstLen):
 
         #np.arrange(listLen).reshape(1,1, listLen)
         # Generates a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal
+        #integer
 
+        random.seed(5)
         random_ints = random.sample(range(numRange), lstLen)
 
-        # Generates a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal
-        random.seed(2)
-        random_flts = []
-        for i in range(lstLen):
-            value = random()
-            value = round(value, 2)
-            random_flts.append(value)
 
-        return (random_ints, random_flts)
+        # Decimal
+        #source: https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.random_sample.html
 
-'''
+        random_flts = np.random.random_sample((lstLen,)))
+
+        return (random_flts, random_ints)
+
+
+
+
