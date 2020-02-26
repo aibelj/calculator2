@@ -31,19 +31,19 @@ class Random:
         return random_flt
 
 
-    def random_num_seed(self, low, high):
-        #Generate a random number with a seed between a range of two numbers - Integer
-        random.seed (5)
+    def random_int_seed(self, low, high, seed_):
+        #Generate a random integer with a seed between a range of two numbers (low, high)
+        random.seed (seed_)
         random_int = random.randint(low, high, 1)
+        return random_int
 
-        # Generate a random number with a seed between a range of two numbers - Decimal
-        random.seed (5)
+    def random_flt_seed(self, low, high, seed_):
+        # Generate a random float with a seed between a range of two numbers - (low, high)
+        random.seed (seed_)
         random_flt =  round(random.uniform(low, high), 2)
-
-        return (random_flt, random_int)
+        return random_flt
 
     def random_lst_seed(self, numRange, lstLen):
-
         #np.arrange(listLen).reshape(1,1, listLen)
         # Generates a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal
         #integer
