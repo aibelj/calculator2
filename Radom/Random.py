@@ -47,6 +47,27 @@ class Random:
 
         return (random_flts, random_ints)
 
+    def random_item_lst (self, lst):
+        # Select a random item from a list
 
+        lst_len = len(lst)
+
+        random_int_flt = self.random_num_noSeed(0, lst_len)
+        '''ask prof why pass to self when calling random_num_noSeed??'''
+
+        random_int = random_int_flt[0]
+
+        return lst[random_int]
+
+    def random_num_fromList (self, numRange, lstLen):
+        '''question 5: Set a seed and randomly.select the same value from a list - further clarify'''
+
+        num_lst = self.random_lst_seed(numRange, lstLen)
+
+        #random.choice selects a random item from a list
+
+        random_num = random.choice(num_lst)
+
+        return random_num
 
 
