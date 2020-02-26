@@ -8,15 +8,28 @@ from numpy.random import randint
 import pprint
 
 class Random:
+'''
+    below is an idea how I can individualize the functions:
 
-    def random_num_noSeed(self, low, high):
+    def random(self, low: float, high:float, seed = None):
+        if seed is None:
+
+    def random(self, low: int, high: int, seed=None):
+        if seed == None:
+
+
+    def randomInteger(self, low, high, seed=None):
+'''
+    def random_num_noSeed(self, low, high, step):
         #Generates a random number without a seed between a range of two numbers - Integer
-        random_int = random.randrange(low, high, 1)
+        random_int = random.randrange(low, high, step)
+        return random_int
 
-        # Generates a random number without a seed between a range of two numbers - Decimal rounded to the hundredth place
-        random_flt = round(random.uniform(low, high),2)
+    def random_flt_noSeed (self, low, high, decimalPlace):
+        # Generates a random number without a seed between a range of two numbers - Decimal rounded to the specified decimal place
+        random_flt = round(random.uniform(low, high), decimalPlace)
+        return random_flt
 
-        return (random_int, random_flt)
 
     def random_num_seed(self, low, high):
         #Generate a random number with a seed between a range of two numbers - Integer
