@@ -9,7 +9,7 @@ from numpy.random import randint
 import pprint
 
 class Random:
-'''
+    '''
     below is an idea how I can individualize the functions:
 
     def random(self, low: float, high:float, seed = None):
@@ -20,7 +20,7 @@ class Random:
 
 
     def randomInteger(self, low, high, seed=None):
-'''
+    '''
     def random_num_noSeed(self, low, high, step):
         #Generates a random number without a seed between a range of two numbers - Integer
         random_int = random.randrange(low, high, step)
@@ -67,40 +67,31 @@ class Random:
         selection = random.choice(lst)
         return selection
 
-    def random_item (self, numRange, lstLen):
-        #a random list of integers is generated and a random item is selected and returned
+    def random_num (self, numRange, lstLen):
+        #a random list of integers is generated and a random num is selected and returned
         #source: https://realpython.com/python-random/
-        items = random_ints(numRange, lstLen)
-        item = random.choice(items)
-        return item
+        nums = random_ints(numRange, lstLen)
+        num = random.choice(nums)
+        return num
 
 
-
-    def random_num_fromList (self, numRange, lstLen):
-        '''question 5: Set a seed and randomly.select the same value from a list - further clarify'''
-
-        num_lst = self.random_lst_seed(numRange, lstLen)
-
-        #random.choice selects a random item from a list
-
-        random_num = random.choice(num_lst)
-
-        return random_num
-
-    def n_num_items_frmLst(self, lst, size):
+    def n_num_items_frmLst(self, numRange, lstLen, size):
         #6. Select N number of items from a list without a seed
         #source: https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.choice.html
-        ''' do you want uniqure numbers every time or can it have duplicates '''
 
-        #this returns a list/array
-        newLst = np.random.choice(lst, size, replace=False, p=None)
+        #generates a random sample
+        nums = random_ints(numRange, lstLen)
 
+        n = size
+
+        newLst = np.random.choice(nums, n, replace=False, p=None)
         return newLst
 
-    def n_num_items_seedLst(self, numRange, listLen, size):
+    def n_num_items_seedLst(self, numRange, listLen, seed_, size):
         #7.  Select N number of items from a list with a seed
+        #Source: https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.choice.html
 
-        lst = self.random_lst_seed(numRange, lstLen)
+        lst = self.random_ints_seed(numRange, lstLen, seed_)
 
         newLst = np.random.choice(lst, size, replace=False, p=None)
 
