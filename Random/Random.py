@@ -43,21 +43,22 @@ class Random:
         random_flt =  round(random.uniform(low, high), 2)
         return random_flt
 
-    def random_lst_seed(self, numRange, lstLen):
+    def random_ints_seed(self, numRange, lstLen, seed_):
         #np.arrange(listLen).reshape(1,1, listLen)
-        # Generates a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal
-        #integer
-
-        random.seed(5)
-        random_ints = random.sample(range(numRange), lstLen)
-
-
-        # Decimal
+        # Generates a list of N random numbers with a seed and between a range of numbers - Integer
         #source: https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.random_sample.html
-        np.random.seed(5)
-        random_flts = np.random.random_sample((lstLen,))
 
-        return (random_flts, random_ints)
+        random.seed(seed_)
+        random_ints = random.sample(range(numRange), lstLen)
+        return random_ints
+
+    def random_flts_seed(self, numRange, lstLen, seed_):
+        # Generates a list of N random numbers with a seed and between a range of numbers - Decimal
+        #source: https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.random_sample.html
+
+        np.random.seed(seed_)
+        random_flts = np.random.random_sample((lstLen,))
+        return random_flts
 
     def random_item_lst (self, lst):
         # Select a random item from a list
