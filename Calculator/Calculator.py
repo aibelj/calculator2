@@ -4,6 +4,7 @@ from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Calculator.Square import squaring
 from Calculator.SquareRoot import squareroot
+
 from Statistics.Mode import mode
 from Statistics.Median import median
 
