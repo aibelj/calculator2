@@ -70,4 +70,21 @@ class Random:
 
         return random_num
 
+    def n_num_items_frmLst(self, lst, size):
+        #6. Select N number of items from a list without a seed
+        #source: https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.choice.html
+        ''' do you want uniqure numbers every time or can it have duplicates '''
 
+        #this returns a list/array
+        newLst = np.random.choice(lst, size, replace=False, p=None)
+
+        return newLst
+
+    def n_num_items_seedLst(self, numRange, listLen, size):
+        #7.  Select N number of items from a list with a seed
+
+        lst = self.random_lst_seed(numRange, lstLen)
+
+        newLst = np.random.choice(lst, size, replace=False, p=None)
+
+        return newLst
