@@ -1,5 +1,4 @@
-#Random class
-#random methods
+#class Random and its random methods
 
 from random import random
 import unittest
