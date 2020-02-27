@@ -14,7 +14,7 @@ class ItemReturnType:
     def random_num_seed(data, seed):
         # returns random number from a list (WITH seed)
         random.seed(seed)
-        num = ItemReturnType.num(data)
+        num = ItemReturnType.random_num(data)
         return num
 
     @staticmethod
