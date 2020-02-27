@@ -38,3 +38,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(True, trueFalse)
 
     def test_aList(self):
+        returnLst = ItemReturnType.aList(self.test, 2)
+        trueFalse = False
+        if len(returnLst) == 2:
+            for num in returnLst:
+                if num in self.test and type(num) == int:
+                    trueFalse = True
+                else:
+                    break
+        self.assertEqual(True, trueFalse)
+
+    def test_aList_seed(self):
