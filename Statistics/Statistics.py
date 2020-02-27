@@ -24,13 +24,13 @@ class Statistics(Calculator):
         return self.result
 
     def standard_deviance (self, data):
-        self. result = standard_deviance(self, data)
+        self.result = standard_deviance(data)
         return self.result
 
     def variance (self, data):
-        self.result = variance(self, data)
+        self.result = variance(data)
         return self.result
 
     def quartiles (self, data, percentile):
-        self.results = quartiles(data, percentile)
-        return self.results
+        self.result = quartiles(data, percentile)
+        return self.result
