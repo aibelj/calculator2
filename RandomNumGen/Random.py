@@ -1,10 +1,10 @@
-#class Random and its random methods
+#class RandomNumGen and its random methods
 
 from random import random
 import unittest
 import numpy as np
 from numpy.random import seed
-from Random.RandomIntGen import random_ints
+from RandomNumGen.RandomNumber import random_ints
 from numpy.random import randint
 import pprint
 
