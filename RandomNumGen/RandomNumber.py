@@ -1,4 +1,4 @@
-import random from random
+from random import random
 
 class RandomNumber:
 
