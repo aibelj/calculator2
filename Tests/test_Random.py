@@ -21,3 +21,12 @@ class MyTestCase(unittest.TestCase):
         result1 = RandomList.random_list(0, 10, 5, 5)
         result2 = RandomList.random_list(0, 10, 5,5,)
         self.assertEqual(True, result1 == result2)
+
+    def test_random_num(self):
+        result = ItemReturnType.random_num(self.test)
+        trueFalse = False
+        if result in self.test and type(result) == int:
+            trueFalse = True
+        self.assertEqual(True, trueFalse)
+
+    def test_random_num_seed(self):
