@@ -18,5 +18,5 @@ class Skew:
     @staticmethod
     def medianskew(data):
         n1 = subtraction(Mean.mean(data), Median.median(data))
-        n2 = division(ni, StandardDeviation.standard_deviance(data))
+        n2 = division(n1, StandardDeviation.standard_deviance(data))
         return n2
