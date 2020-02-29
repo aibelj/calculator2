@@ -1,5 +1,5 @@
 from Statistics.Mean import Mean
-from Statistics.Variance import variance
+from Statistics.Variance import Variance
 from Statistics.StandardDeviation import standard_deviance
 
 #reference https://realpython.com/python-statistics/
