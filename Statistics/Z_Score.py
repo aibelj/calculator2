@@ -2,7 +2,8 @@ from Statistics.Mean import Mean
 from Statistics.StandardDeviation import StandardDeviation
 from Calculator.Division import division
 
-Class ZScore():
+class ZScore():
+
     @staticmethod
     def z_score(a, b, c):
 
