@@ -1,20 +1,22 @@
 from Statistics.Mean import Mean
-from Statistics.Variance import Variance
+from Statistics.Median import Median
+from Statistics.Mode import Mode
 from Statistics.StandardDeviation import StandardDeviation
+from Calculator.Division import division
+from Calculator.Subtraction import subtraction
 
-#reference https://realpython.com/python-statistics/
 
-class Skew():
+
+class Skew:
 
     @staticmethod
-    def skewness (data):
+    def modeskew(data):
+        n1 = subtraction(Mean.mean(data), Mode.mode(data))
+        n2 = division(n1, StandardDeviation.standard_deviance(data))
+        return n2
 
-        dataLen = len(data)
-
-        mn = Mean.mean(data)
-        var = Variance.variance(data)
-        std = StandardDeviation.standard_deviance(data)
-
-        skew = (sum((item - mn)**3 for item in data)* dataLen / ((dataLen - 1) * (dataLen - 2) * std**3))
-
-        return skew
+    @staticmethod
+    def medianskew(data):
+        n1 = subtraction(Mean.mean(data), Median.median(data))
+        n2 = division(ni, StandardDeviation.standard_deviance(data))
+        return n2
