@@ -1,10 +1,10 @@
 from Calculator.Calculator import Calculator
-from Statistics.Mean import mean
-from Statistics.Mode import mode
-from Statistics.Median import median
-from Statistics.StandardDeviation import standard_deviance
-from Statistics.Variance import variance
-from Statistics.Quartiles import quartiles
+from Statistics.Mean import Mean
+from Statistics.Mode import Mode
+from Statistics.Median import Median
+from Statistics.StandardDeviation import StandardDeviation
+from Statistics.Variance import Variance
+from Statistics.Quartiles import Quartiles
 
 
 class Statistics(Calculator):
@@ -12,25 +12,22 @@ class Statistics(Calculator):
     data = []
 
     def mean(self, data):
-        self.result = mean(data)
+        self.result = Mean.mean(data)
         return self.result
 
     def mode(self, data):
-        self.result = mode(data)
+        self.result = Mode.mode(data)
         return self.result
 
     def median (self, data):
-        self.result = median(data)
+        self.result = Median.median(data)
         return self.result
 
     def standard_deviance (self, data):
-        self.result = standard_deviance(data)
+        self.result = StandardDeviation.standard_deviance(data)
         return self.result
 
     def variance (self, data):
-        self.result = variance(data)
+        self.result = Variance.variance(data)
         return self.result
 
-    def quartiles (self, data, percentile):
-        self.result = quartiles(data, percentile)
-        return self.result
