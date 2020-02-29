@@ -18,6 +18,3 @@ class Skew():
         skew = (sum((item - mn)**3 for item in data)* dataLen / ((dataLen - 1) * (dataLen - 2) * std**3))
 
         return skew
-
-
-    
