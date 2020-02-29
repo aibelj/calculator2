@@ -1,21 +1,23 @@
-
-from Statistics.Mean import mean
+from Statistics.Mean import Mean
 from Statistics.Variance import variance
 from Statistics.StandardDeviation import standard_deviance
 
 #reference https://realpython.com/python-statistics/
 
-def skewness (data):
+class Skew():
 
-    dataLen = len(data)
+    @staticmethod
+    def skewness (data):
 
-    mn = mean(data)
-    var = variance(data)
-    std = standard_deviance(data)
+        dataLen = len(data)
 
-    skew = (sum((item - mn)**3 for item in data)* dataLen / ((dataLen - 1) * (dataLen - 2) * std**3))
+        mn = mean(data)
+        var = variance(data)
+        std = standard_deviance(data)
 
-    return skew
+        skew = (sum((item - mn)**3 for item in data)* dataLen / ((dataLen - 1) * (dataLen - 2) * std**3))
+
+        return skew
 
 
     
