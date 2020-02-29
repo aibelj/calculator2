@@ -19,6 +19,7 @@ class Quartiles:
     def quartile2(data):
         solution = np.percentile(data, [50])
         return solution
+
     @staticmethod
     def quartile3(data):
         solution = np.percentile(data, [75])
