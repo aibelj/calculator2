@@ -1,8 +1,7 @@
-import statistics
+import numpy as np
 
+class Median():
 
-class median (data):
-
+    @staticmethod
     def median(data):
-        med = statistics.median(data)
-        return med
+        return np.median(data)
