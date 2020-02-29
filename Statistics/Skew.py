@@ -1,6 +1,6 @@
 from Statistics.Mean import Mean
 from Statistics.Variance import Variance
-from Statistics.StandardDeviation import standard_deviance
+from Statistics.StandardDeviation import StandardDeviation
 
 #reference https://realpython.com/python-statistics/
 
@@ -11,9 +11,9 @@ class Skew():
 
         dataLen = len(data)
 
-        mn = mean(data)
-        var = variance(data)
-        std = standard_deviance(data)
+        mn = Mean.mean(data)
+        var = Variance.variance(data)
+        std = StandardDeviation.standard_deviance(data)
 
         skew = (sum((item - mn)**3 for item in data)* dataLen / ((dataLen - 1) * (dataLen - 2) * std**3))
 
