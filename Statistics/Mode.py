@@ -1,7 +1,10 @@
 from statistics import mode
 
-def mode (data):
-    return mode(data)
+class Mode():
+
+    @staticmethod
+    def mode (data):
+        return mode(data)
 
 #ource: https://stackoverflow.com/questions/10797819/finding-the-mode-of-a-list
 
