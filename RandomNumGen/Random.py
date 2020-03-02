@@ -14,7 +14,7 @@ from numpy.random import randint
 import pprint
 
 class Random:
-    '''
+
     below is an idea how I can individualize the functions:
 
     def random(self, low: float, high:float, seed = None):
@@ -25,7 +25,7 @@ class Random:
 
 
     def randomInteger(self, low, high, seed=None):
-    '''
+
     def random_num_noSeed(self, low, high, step):
         #Generates a random number without a seed between a range of two numbers - Integer
         random_int = random.randrange(low, high, step)
@@ -103,3 +103,4 @@ class Random:
         return newLst
 
 '''
+
