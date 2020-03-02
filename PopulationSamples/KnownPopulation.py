@@ -5,7 +5,7 @@ from PopulationSamples.MarginError import MarginError
 
 class KnownPopulation():
     @staticmethod
-    def sampleSize(data, seed):
+    def known_pop_sample(data, seed):
 
         z_s = Z_Score.zscore(data, seed)
         m_e = MarginError.margin(data, seed)
