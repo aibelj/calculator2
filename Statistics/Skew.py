@@ -1,22 +1,6 @@
-from Statistics.Mean import Mean
-from Statistics.Median import Median
-from Statistics.Mode import Mode
-from Statistics.StandardDeviation import StandardDeviation
-from Calculator.Division import division
-from Calculator.Subtraction import subtraction
+from scipy.stats import skew
 
-
-
-class Skew:
-
+class Skewness():
     @staticmethod
-    def modeskew(data):
-        n1 = subtraction(Mean.mean(data), Mode.mode(data))
-        n2 = division(n1, StandardDeviation.standard_deviance(data))
-        return n2
-
-    @staticmethod
-    def medianskew(data):
-        n1 = subtraction(Mean.mean(data), Median.median(data))
-        n2 = division(n1, StandardDeviation.standard_deviance(data))
-        return n2
+    def skewness(data):
+        return skew(data)
