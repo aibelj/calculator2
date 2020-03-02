@@ -13,7 +13,7 @@ class RandomNumber:
 
     @staticmethod
     def random_number_seed(low, high, seed):
-        #generates a random integer between who numbers with a seed
+        #generates a random integer between two numbers with a seed
 
         random.seed(seed)
         randomNumber = RandomNumber.random_number(low, high)
