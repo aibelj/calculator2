@@ -4,4 +4,6 @@ class Mean():
 
     @staticmethod
     def mean(data):
-        return np.mean(data)
+        solution = np.mean(data)
+        return solution
+
