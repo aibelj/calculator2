@@ -5,5 +5,4 @@ import numpy as np
 class StandardDeviation():
     @staticmethod
     def standard_deviance(data):
-        sd = np.std(data)
-        return sd
+        return np.std(data)
