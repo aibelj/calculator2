@@ -45,7 +45,16 @@ class MyTestCase(unittest.TestCase):
                 if num in self.test and type(num) == int:
                     trueFalse = True
                 else:
-                    break
+                    trueFalse = False
         self.assertEqual(True, trueFalse)
 
     def test_aList_seed(self):
+        returnLst = ItemReturnType.aList_seed(self.test, 2, 5)
+        trueFalse = False
+        if len(returnLst) == 2:
+            for num in returnLst:
+                if type(num) == int and num in self.test:
+                    trueFalse = True
+                else:
+                    trueFalse = False
+        self.assertEqual(True, trueFalse)
