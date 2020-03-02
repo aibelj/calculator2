@@ -2,7 +2,7 @@ import numpy as np
 
 #source: https://realpython.com/python-statistics/
 
-class Quartiles:
+class Quartiles():
     '''
     percentile() takes several arguments. You have to provide the dataset as
     the first argument and the percentile value as the second. The dataset can be in the
@@ -10,19 +10,11 @@ class Quartiles:
     can be a number between 0 and 100
     '''
 
-    @staticmethod
-    def quartile1(data):
-        solution = np.percentile(data,[25])
-        return solution
 
     @staticmethod
-    def quartile2(data):
-        solution = np.percentile(data, [50])
-        return solution
-
-    @staticmethod
-    def quartile3(data):
-        solution = np.percentile(data, [75])
-        return solution
-
+    def quartile(data):
+        quartile1 = np.quantile(data, .25)
+        quartile2 = np.quantile(data, .50)
+        quartile3 = np.quantile(data, .75)
+        return quartile1, quartile2, quartile3
 
