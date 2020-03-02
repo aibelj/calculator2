@@ -30,6 +30,7 @@ class ItemReturnType:
 
     @staticmethod
     def aList_seed(data, lstLen, seed):
+        #returns n of numbers from a list with a seed
         random.seed(seed)
         lst = ItemReturnType.aList(data, lstLen)
         return lst
