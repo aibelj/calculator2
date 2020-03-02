@@ -1,10 +1,13 @@
+'''
+#from previous work assignment
+
 from Calculator.Calculator import Calculator
 from Statistics.Mean import Mean
 from Statistics.Mode import Mode
 from Statistics.Median import Median
 from Statistics.StandardDeviation import StandardDeviation
 from Statistics.Variance import Variance
-from Statistics.Quartiles import Quartiles
+
 
 
 class Statistics(Calculator):
@@ -31,3 +34,4 @@ class Statistics(Calculator):
         self.result = Variance.variance(data)
         return self.result
 
+'''
