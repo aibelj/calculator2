@@ -7,6 +7,7 @@ from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Calculator.Logarithm import logarithm
 from Calculator.SquareRoot import squareroot
+from Calculator.Exponentiation import exponentiation
 
 
 class MyTestCase(unittest.TestCase):
@@ -36,6 +37,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_squareRoot(self):
         self.assertEqual(5, squareroot(25))
+
+    def test_exponentiation(self):
+        self.assertEqual(9, exponentiation(3,2))
 
 if __name__ == '__main__':
     unittest.main()
