@@ -1,3 +1,8 @@
+'''
+#notes from tutoring session
+
+
+
 #class RandomNumGen and its random methods
 
 from random import random
@@ -96,3 +101,5 @@ class Random:
         newLst = np.random.choice(lst, size, replace=False, p=None)
 
         return newLst
+
+'''
