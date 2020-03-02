@@ -6,7 +6,7 @@ class Mode():
     def mode (data):
         return mode(data)
 
-#ource: https://stackoverflow.com/questions/10797819/finding-the-mode-of-a-list
+#source: https://stackoverflow.com/questions/10797819/finding-the-mode-of-a-list
 
 '''
 alternative way to solve: 
