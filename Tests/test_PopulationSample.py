@@ -14,17 +14,17 @@ from PopulationSamples.UnknownPopulation import UnknownPopulation
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        seed(3)
-        self.testData = randint(0, 50, 15)
+        seed(seed=3)
+        self.testData = randint(low=0, high=50, size=15)
         #pprint(self.testData)
 
     def test_RandomSample(self):
         #creates a random sample for testing
-        sample = RandomSample.random_sample(seed_=3, self.testData, lstLen=5)
+        sample = RandomSample.random_sample(seed_=3, data=self.testData, lstLen=5)
         self.assertEqual(sample, [8, 41, 43, 3, 21])
 
     def test_SystematicSample(self):
-        result = SystemicSample.systemicSample(self.testData)
+        result = SystemicSample.systemicSample(aLst=self.testData)
         self.assertEqual(result, [3, 21, 43, 21, 20])
 
     def test_ConfidenceIntervalPopulation(self):
