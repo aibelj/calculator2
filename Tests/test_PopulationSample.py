@@ -32,7 +32,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(result, (15.581632402905116, 28.68503426376155))
 
     def test_ConfidenceIntervalSample(self):
-        result = ConfidenceIntervalSample.confidenceInterval(confidence=.90, data=self.testData, seed=3, high=)
+        result = ConfidenceIntervalSample.confidenceInterval(confidence=.90, data=self.testData, seed=3, high=5)
         self.assertEqual(result, (5.6669372302865675, 40.73306276971343))
 
     def test_MarginError(self):
